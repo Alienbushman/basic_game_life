@@ -87,15 +87,15 @@ def step(grid):
     return new_grid
             
             
-grid=create_grid(25)
+grid=create_grid(50)
 #grid=start_glider(grid)
-grid=random_start(grid,100)
-time.sleep(0.5)
+grid=random_start(grid,500)
+#time.sleep(0.02)
 os.system('clear')
 print_grid(grid)
 new_grid=step(grid)
-for i in range(80):
-	time.sleep(0.5)
+while True:
+	time.sleep(0.15)
 	os.system('clear')
 	print_grid(new_grid)
 	new_grid=step(new_grid)
